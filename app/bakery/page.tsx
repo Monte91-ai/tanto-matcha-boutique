@@ -78,8 +78,8 @@ export default function BakeryPage() {
                 </div>
                 <div className="mt-6 flex items-baseline justify-between border-t border-line pt-5">
                   <h2 className="font-serif text-3xl font-light md:text-4xl">{item.name}</h2>
-                  <span className="font-sans text-xs font-light tracking-[0.15em] text-muted">
-                    {item.price}
+                  <span className="font-sans text-xs font-light tracking-[0.2em] text-muted">
+                    {`€ ${item.price}`}
                   </span>
                 </div>
                 <p className="mt-3 font-sans text-sm font-light leading-relaxed text-graphite">

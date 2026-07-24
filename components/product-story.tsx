@@ -53,8 +53,8 @@ export function ProductStory({ product }: { product: Product }) {
           ) : null}
 
           {product.price ? (
-            <p className="mt-8 font-sans text-xs font-light tracking-[0.15em] text-muted">
-              {product.price}
+            <p className="mt-8 font-sans text-xs font-light uppercase tracking-[0.25em] text-muted">
+              {product.price.trim().startsWith("€") ? product.price : `€ ${product.price}`}
             </p>
           ) : null}
         </Reveal>
