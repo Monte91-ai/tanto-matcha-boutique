@@ -1,0 +1,205 @@
+.maison-story {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background-color: var(--color-bg);
+}
+
+.story-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+}
+
+.story-text h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.story-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.story-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Project Section */
+.maison-project {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background-color: var(--color-secondary);
+}
+
+.project-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-container h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.project-intro {
+  font-size: 1.05rem;
+  margin-bottom: var(--spacing-2xl);
+  max-width: 800px;
+}
+
+/* Materials & Design */
+.materials-design {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background-color: var(--color-bg);
+}
+
+.materials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.material-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.material-item p {
+  font-size: 0.95rem;
+}
+
+/* Values Section */
+.maison-values {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background-color: var(--color-secondary);
+}
+
+.values-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.values-container h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.value-card {
+  padding: var(--spacing-lg);
+  background-color: white;
+  text-align: center;
+  border-radius: 0;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.value-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.value-card .value-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto var(--spacing-md);
+}
+
+.value-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.value-card p {
+  font-size: 0.95rem;
+}
+
+/* Transformation Section */
+.transformation {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background-color: var(--color-bg);
+}
+
+.transformation-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.transformation h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.section-intro {
+  font-size: 1.05rem;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+  margin-top: var(--spacing-xl);
+}
+
+.transformation-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.transformation-image {
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.transformation-image img {
+  width: 100%;
+  height: auto;
+}
+
+.transformation-arrow {
+  display: flex;
+  justify-content: center;
+  color: var(--color-accent);
+}
+
+.transformation-arrow svg {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  .story-container {
+    grid-template-columns: 1fr;
+  }
+
+  .materials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .before-after {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .transformation-arrow {
+    transform: rotate(90deg);
+    margin: var(--spacing-md) 0;
+  }
+}

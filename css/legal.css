@@ -1,0 +1,70 @@
+.legal-content {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background-color: var(--color-bg);
+}
+
+.legal-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.legal-container h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-xl);
+}
+
+.legal-section {
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.legal-section:last-child {
+  border-bottom: none;
+}
+
+.legal-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-lg);
+  font-weight: 500;
+}
+
+.legal-section p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-md);
+}
+
+.legal-section ul {
+  list-style: none;
+  padding-left: var(--spacing-lg);
+}
+
+.legal-section ul li {
+  font-size: 0.95rem;
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+}
+
+.legal-section ul li:before {
+  content: "•";
+  margin-right: var(--spacing-sm);
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.last-updated {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .legal-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .legal-section h3 {
+    font-size: 1.1rem;
+  }
+}
