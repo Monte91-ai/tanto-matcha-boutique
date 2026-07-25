@@ -1,0 +1,170 @@
+/**
+ * TANTO Image Optimization Styles
+ * Ensures responsive, high-quality image rendering across all pages
+ */
+
+/* Base image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  font-display: swap;
+}
+
+/* Responsive container images */
+.hero-image img,
+.highlight-image img,
+.story-image img,
+.gallery-item img,
+.transformation-image img,
+.product-image img,
+.preview-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  background-color: var(--color-secondary, #F5F2ED);
+}
+
+/* Hero section image optimization */
+.hero-image {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    height: 400px;
+  }
+}
+
+/* Gallery grid images */
+.gallery-grid .gallery-item {
+  overflow: hidden;
+  background-color: var(--color-secondary, #F5F2ED);
+}
+
+.gallery-grid .gallery-item img {
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.gallery-grid .gallery-item:hover img {
+  transform: scale(1.02);
+}
+
+/* Large gallery items */
+.gallery-grid .gallery-item.large {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .gallery-grid .gallery-item.large {
+    grid-column: span 1;
+  }
+}
+
+/* Product card images */
+.product-card .product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: var(--color-secondary, #F5F2ED);
+}
+
+.product-card .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+/* Transformation section images */
+.transformation-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--color-secondary, #F5F2ED);
+}
+
+.transformation-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive image containers */
+.image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Image loading placeholder */
+img[loading="lazy"] {
+  background: linear-gradient(90deg, var(--color-secondary, #F5F2ED) 25%, var(--color-primary, #E8E0D5) 50%, var(--color-secondary, #F5F2ED) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Ensure images don't exceed container */
+.intro-text img,
+.story-text img,
+.highlight-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Picture element for multiple formats */
+picture {
+  display: block;
+}
+
+picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Accessibility: Ensure images have proper contrast */
+@media (prefers-contrast: more) {
+  img {
+    filter: contrast(1.1);
+  }
+}
+
+/* Print styles */
+@media print {
+  img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+}
